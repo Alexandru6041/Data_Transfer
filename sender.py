@@ -1,7 +1,6 @@
 import tqdm
 import os
 import socket
-import argparse
 import tkinter as tk
 from tkinter import filedialog
 SEPARATOR = "<SEPARATOR>"
