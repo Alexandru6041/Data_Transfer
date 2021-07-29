@@ -4,13 +4,13 @@ import socket
 import tkinter as tk
 from tkinter import filedialog
 SEPARATOR = "<SEPARATOR>"
-BUFFER_SIZE = 1024 * 4
+BUFFER_SIZE = 4096
 def send_file(filename, host, port):
     filesize = os.path.getsize(filename)
     s = socket.socket()
     print(f"Connecting to {host}:{port}")
     s.connect((host,int(port)))
-    print("Connection to host {host} was completed successfully.")
+    print(f"Connection to {host} was completed successfully.")
     s.send(f"{filename}{SEPARATOR}{filesize}".encode())
     progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit = "B", unit_scale = True, unit_divisor = 1024)
     with open(filename, "rb") as file:

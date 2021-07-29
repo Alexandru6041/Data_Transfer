@@ -3,7 +3,7 @@ import tqdm
 import os
 hostname = socket.gethostname()
 SERVER_HOST = socket.gethostbyname(hostname)
-SERVER_PORT = 5001
+SERVER_PORT = 5001  
 
 BUFFER_SIZE = 1024 * 4
 
@@ -14,8 +14,7 @@ s.bind((SERVER_HOST, SERVER_PORT))
 s.listen(5)
 print(f"[*] Listening as {SERVER_HOST}:{SERVER_PORT}")
 client_socket, address = s.accept()
-print(f"[+] {address} is connected.")
-
+print(f"{address} is connected.")
 received = client_socket.recv(BUFFER_SIZE).decode()
 filename, filesize = received.split(SEPARATOR)
 filename = os.path.basename(filename)
