@@ -1,7 +1,8 @@
 import socket
 import tqdm
 import os
-SERVER_HOST = "192.168.0.128"
+hostname = socket.gethostname()
+SERVER_HOST = socket.gethostbyname(hostname)
 SERVER_PORT = 5001
 
 BUFFER_SIZE = 4096

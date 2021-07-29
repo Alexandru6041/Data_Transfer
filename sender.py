@@ -2,7 +2,8 @@ import tqdm
 import os
 import socket
 import argparse
-
+import tkinter as tk
+from tkinter import filedialog
 SEPARATOR = "<SEPARATOR>"
 BUFFER_SIZE = 1024 * 4
 def send_file(filename, host, port):
@@ -25,5 +26,8 @@ def send_file(filename, host, port):
 
 host = input("Host IP: ")
 port = input("Port: ")
-file = input("Filename: ")
+root = tk.Tk()
+root.withdraw()
+file_path = filedialog.askopenfilename()
+file = str(file_path)
 send_file(file,host,port)
