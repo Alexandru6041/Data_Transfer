@@ -24,7 +24,7 @@ def send_file(filename, host, port):
     s.close()
 
 host = input("Host IP: ")
-port = input("Port: ")
+port = 5001
 root = tk.Tk()
 root.withdraw()
 file_path = filedialog.askopenfilename()

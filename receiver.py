@@ -5,7 +5,7 @@ hostname = socket.gethostname()
 SERVER_HOST = socket.gethostbyname(hostname)
 SERVER_PORT = 5001
 
-BUFFER_SIZE = 4096
+BUFFER_SIZE = 1024 * 4
 
 SEPARATOR = "<SEPARATOR>"
 
