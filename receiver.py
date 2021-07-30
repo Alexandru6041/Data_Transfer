@@ -35,4 +35,5 @@ s.close()
 import time
 time.sleep(1.2)
 print(" ")
-print(f"Your file has been received from {address} to {SERVER_HOST} through port {SERVER_PORT}.\nFile location: " + str(file_location))
+print(" ")
+print(f"Your file has been received from {address} to {SERVER_HOST} through port {SERVER_PORT}.\nFile location: " + str(file_location) + "\n")
