@@ -29,4 +29,7 @@ with open(filename, "wb") as f:
         progress.update(len(bytes_read))
 
 client_socket.close()
+current_folder = os.getcwd()
+file_location = str(current_folder) + str(filename)
+print("Your file has been received from {host} to {SERVER_HOST} through {SERVER_PORT}.\n File location: " + str(file_location))
 s.close()

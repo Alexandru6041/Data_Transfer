@@ -21,6 +21,7 @@ def send_file(filename, host, port):
                 break
             s.sendall(bytes_read)
             progress.update(len(bytes_read))
+    print("{filename} has been successfully sent to {host} through {port}")
     s.close()
 
 host = input("Host IP: ")
