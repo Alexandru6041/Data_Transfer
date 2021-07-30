@@ -21,11 +21,13 @@ def send_file(filename, host, port):
                 break
             s.sendall(bytes_read)
             progress.update(len(bytes_read))
-    print("{filename} has been successfully sent to {host} through {port}")
     s.close()
+    import time
+    time.sleep(1.2)
+    print(f"{filename} has been successfully sent to {host} through {port}")
 
 host = input("Host IP: ")
-port = 5001
+port = 4012
 root = tk.Tk()
 root.withdraw()
 file_path = filedialog.askopenfilename()

@@ -3,7 +3,7 @@ import tqdm
 import os
 hostname = socket.gethostname()
 SERVER_HOST = socket.gethostbyname(hostname)
-SERVER_PORT = 5001  
+SERVER_PORT = 4012
 
 BUFFER_SIZE = 1024 * 4
 
@@ -30,6 +30,9 @@ with open(filename, "wb") as f:
 
 client_socket.close()
 current_folder = os.getcwd()
-file_location = str(current_folder) + str(filename)
-print("Your file has been received from {host} to {SERVER_HOST} through {SERVER_PORT}.\n File location: " + str(file_location))
+file_location = str(current_folder) + "/" + str(filename)
 s.close()
+import time
+time.sleep(1.2)
+print(" ")
+print(f"Your file has been received from {address} to {SERVER_HOST} through port {SERVER_PORT}.\nFile location: " + str(file_location))
