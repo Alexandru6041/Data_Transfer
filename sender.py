@@ -24,8 +24,9 @@ def send_file(filename, host, port):
     s.close()
     import time
     time.sleep(1.2)
-    print(" ")
-    print(f"Your file has been successfully sent to {host} through {port}")
+    print("")
+    print(f"Your file has been successfully sent to {host} through port {port}")
+    print("")
 
 host = input("Host IP: ")
 port = 5001
