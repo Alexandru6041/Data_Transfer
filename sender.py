@@ -30,7 +30,7 @@ def send_file(filename, host, port):
     print("")
 
 host = input("Host IP: ")
-port = 5001
+port = 8000
 root = tk.Tk()
 root.withdraw()
 file_path = filedialog.askopenfilename()

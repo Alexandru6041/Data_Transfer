@@ -3,7 +3,7 @@ import tqdm
 import os
 hostname = socket.gethostname()
 SERVER_HOST = socket.gethostbyname(hostname)
-SERVER_PORT = 5001
+SERVER_PORT = 8000
 
 BUFFER_SIZE = 1024 * 4
 
